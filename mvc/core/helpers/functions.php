@@ -1,6 +1,6 @@
 <?php
 
-function view($view, $data = [])
+function view($view = null, $data = [])
 {
     dd($view);
 }

@@ -4,7 +4,7 @@ session_start();
 
 require __DIR__ . "/../vendor/autoload.php";
 
-require './bootstrap.php';
+require '../bootstrap/app.php';
 
 require '../routes/web.php';
 
@@ -17,8 +17,6 @@ class HomeController
     }
 }
 
-
-// (new HomeController())->index();
-
+// (new HomeController())->index())
 
 echo APP_BASE_PATH;
