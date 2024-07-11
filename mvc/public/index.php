@@ -1,16 +1,24 @@
 <?php
 
-// constantes utilitárias
-define("APP_START", microtime(true));
-define("APP_NAME", "MY MVC");
-define("APP_VERSION", "0.0.1");
+session_start();
 
 require __DIR__ . "/../vendor/autoload.php";
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__, 2));
+require './bootstrap.php';
 
-$dotenv->load();
+require '../routes/web.php';
 
-// dd($_ENV["DB_HOST"]);
 
-dd($_SERVER);
+class HomeController
+{
+    public function index()
+    {
+        view('index');
+    }
+}
+
+
+// (new HomeController())->index();
+
+
+echo APP_BASE_PATH;
