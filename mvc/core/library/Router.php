@@ -4,7 +4,6 @@ namespace core\library;
 
 class Router
 {
-
     private array $routes = [];
 
     public function add(
@@ -18,9 +17,6 @@ class Router
 
     public function execute()
     {
-        // return view();
-        // dd($this->routes);
-
         foreach ($this->routes as $request => $routes) {
             dump($request, $routes);
         }
